@@ -49,23 +49,40 @@
     justify-content: space-between;
     height: 100%;
     width: 100%;
-    padding: 40px;
+    padding: 1vh;
     color: black;
     box-sizing: border-box;
   }
+
+  
   
   /* Header row */
   .header-row {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1vh;
     width: 100%;
-    padding: 20px 0;
     font-family: 'Manrope', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 1px;
   }
   
+
+  .first-row-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.5vh;
+    letter-spacing: 1px;
+  }
+
+  .sole-description-text {
+    display: flex;
+    width: 76%;
+    text-align: start;
+    font-weight: 400;
+    font-size: 3vh;
+  }
+
   /* Center content */
   .center-content {
     text-align: center;
@@ -93,17 +110,16 @@
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-    padding: 20px 0;
-  }
+      }
   
   .footer-logo img {
-    height: 60%;
+    height: 20vh;
     width: auto;
   }
   
   .footer-emails {
     display: flex;
-    gap: 20px;
+    gap: 8vw;
   }
   
   .footer-emails a {
