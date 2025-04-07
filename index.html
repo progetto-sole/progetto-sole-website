@@ -5,9 +5,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-    content="DESCRIZIONE SITO PROGETTO-SOLE" />
+    content="Sole is a creative design studio intent on shaping space through experimentation across multiple mediums, 
+    starting from material and graphic forms. Guided by a sense of relaxed thinking, Sole aims to infiltrate 
+    and merge diverse realities by connecting creatives, activating projects, and bringing them into our ‘sun’." />
 
-  <title>Progetto Sole</title>
+  <title>Sole - Creative Design Studio</title>
   <link rel="alternate" hreflang="it" href="http://localhost:8000" />
   <link rel="alternate" hreflang="en" href="http://localhost:8000/en/" />
   <link rel="manifest" href="manifest.json">
@@ -24,9 +26,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="styles.css" />
 
-  <link
+ <!--  <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"> -->
 
 </head>
 
@@ -37,16 +39,12 @@
     <!--------------------------------------------------- Work-In Progress section ----------------------------------------------------------------------------------->
     <section class="fullscreen-section">
         <div class="background-container">
-            <!-- start with PNG background, then we switch to video -->
-            <!-- <div class="image-background"></div> -->
-
             <div class="video-background">
                 <video autoplay muted loop playsinline>
                   <source src="./assets/video/background_video.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
             </div>
-
         </div>
     
         <div class="content-container">
@@ -54,7 +52,7 @@
                 <div class="first-row-header">
                     <span>Milano</span>
                     <span>Sunny, 20°C </span>
-                    <span>info</span>
+                    <span id="info-button" style="cursor: pointer; text-decoration: underline;">info</span>
                 </div>
                 <div class="sole-description-text">
                     Sole is a creative design studio intent on shaping space through experimentation across multiple mediums, 
@@ -63,34 +61,85 @@
                 </div>
             </div>
 
-           <!--  <div class="after-header-text">
-                <h2>Additional Section Title</h2>
-                <p>This is the text that appears after the header but before the center content. You can add any content here you'd like.</p>
-            </div> -->
-      
+    
             <div class="center-content">
-                <h1></h1>
                 <p>Relax, enjoy the sun—our website is coming soon!</p>
             </div>
       
-            <div class="footer-row">
+            <div class="footer-row-desktop">
                 <div class="footer-logo">
                     <img src="./assets/logo_sole.png" alt="Logo Progetto Sole">
                 </div>
                 <div class="footer-emails">
                     <a href="mailto:ciao@solestudio.xyz">
                         <img src="./assets/icons/email.png" alt="Email-Icon" class="mini-icon"> 
-                        <div>ciao@solestudio.xyz</div>
+                        <div style="text-decoration: underline;">ciao@solestudio.xyz</div>
+                    </a>
+                    <a href="https://www.instagram.com/sole.sole.studio?igsh=MTRpNmhzM2EwcXJ5cA==" target="_blank">
+                        <img src="./assets/icons/instagram.png" alt="Instagram-Icon" class="mini-icon">
+                        <div style="text-decoration: underline;"> sole.sole.studio</div>
+                    </a>
+                    <span>© 2025</span>
+                </div>
+            </div>
+
+            <div class="footer-row-mobile">
+                <div class="footer-logo">
+                    <img src="./assets/logo_sole.png" alt="Logo Progetto Sole">
+                </div>
+                <div class="footer-emails">
+                    <a href="mailto:ciao@solestudio.xyz">
+                        <img src="./assets/icons/email.png" alt="Email-Icon" class="mini-icon"> 
+                        <div style="text-decoration: underline;">Email</div>
                     </a>
                     <a href="https://instagram.com/your_instagram" target="_blank">
                         <img src="./assets/icons/instagram.png" alt="Instagram-Icon" class="mini-icon">
-                        <div> sole.sole.studio</div>
+                        <div style="text-decoration: underline;">Instagram</div>
                     </a>
                     <span>© 2025</span>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Info Overlay -->
+    <div id="info-overlay" class="overlay">
+        <div class="overlay-background">
+        <!-- Background image will be set via CSS -->
+        </div>
+        <div class="overlay-content">
+            <div class="header-row">
+                <div class="first-row-header" style="justify-content: end;">
+                <span class="close-overlay" style="text-decoration: underline;">close</span>
+                </div>
+                <div class="sole-description-text">
+                    Sole Studio is founded by Asia Trianda and Nicolò Cozza. At Sole, we believe ideas—and the design 
+                    process that follows—should emerge from a place of tranquillity and calm, rather than the hyper-productivity of the fast-paced environments we’ve grown accustomed to today. We find this mindset under the sun. 
+                    <br><br> 
+                    Our focus is on cultivating meaningful design by exploring how material and visual experiences can form 
+                    new narratives on a spatial level.
+                    Our Services:
+                    <br><br> 
+                    Exhibition & Spatial Design
+                    <br>
+                    Event Design & Organization
+                    <br>
+                    Set Design & Set-Up
+                    <br>
+                    Event Production & Management
+                    <br><br>
+                    Creative Direction
+                    <br>
+                    Graphic & Digital Design
+                    <br>
+                    Branding Strategy & Campaign
+                    <br>
+                    Design Consultancy 
+                </div>
+            </div>
+    
+        </div>
+    </div>
 
 
     <script src="script.js"></script>

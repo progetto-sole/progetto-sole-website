@@ -86,7 +86,7 @@ html, body {
     justify-content: space-between;
     width: 100%;
     font-weight: 300;
-    font-size: 1.5vh;
+    font-size: 1.7vh;
     letter-spacing: 1px;
   }
 
@@ -95,7 +95,7 @@ html, body {
     width: 84%;
     text-align: start;
     font-weight: 400;
-    font-size: 2.8vh;
+    font-size: 2.6vh;
   }
 
   /* Center content */
@@ -106,25 +106,29 @@ html, body {
   }
   
   .center-content h1 {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Seagal';
     font-weight: 700;
     font-size: 48px;
     margin-bottom: 20px;
   }
   
   .center-content p {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Seagal';
     font-weight: 400;
-    font-size: 24px;
-    line-height: 1.5;
+    font-size: 1.7vh;
   }
   
   /* Footer row */
-  .footer-row {
+  .footer-row-desktop {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    font-family: 'Seagal';
     width: 100%;
+  }
+
+  .footer-row-mobile {
+    display: none;
   }
   
   .footer-logo img {
@@ -136,14 +140,14 @@ html, body {
     display: flex;
     gap: 8vw;
   }
-  
+
   .footer-emails a {
     color: black;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-items: center;
-    font-size: 16px;
+    font-size: 1.7vh;
     transition: opacity 0.3s;
   }
 
@@ -154,15 +158,97 @@ html, body {
     vertical-align: middle;
 }
 
-  
   .footer-emails a:hover {
     opacity: 0.8;
   }
+
+   /* Info Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #AEDAEB;
+  z-index: 1000;
+  padding: 1vh;
+  display: none; /* Initially hidden */
+  overflow: hidden;
+  color: black;
+  font-family: 'Seagal';
+}
+
+.overlay-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('./assets/placeholder-video.jpg'); Replace with your image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Subtle background */
+  z-index: 1001;
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 1002;
   
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.close-overlay {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.close-overlay:hover {
+  opacity: 0.8;
+}
+
+.overlay-main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.overlay-main-content h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.overlay-main-content p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#info-button {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+#info-button:hover {
+  opacity: 0.8;
+}
+  
+  
+  
+  /* Mobile telephone screens */
+  @media screen and (max-width: 600px)  and (min-height: 350px) {
     .header-row {
-      font-size: 14px;
+      font-size: 1.6vh;
     }
     
     .center-content h1 {
@@ -170,7 +256,7 @@ html, body {
     }
     
     .center-content p {
-      font-size: 1.5vh;
+      font-size: 1.6vh;
     }
 
     .sole-description-text {
@@ -180,11 +266,16 @@ html, body {
       font-weight: 400;
       font-size: 1.8vh;
     }
+
+    .footer-row-desktop {
+      display: none;
+    }
     
-    .footer-row {
+    .footer-row-mobile {
+      display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 3vh;
     }
 
     .footer-logo img {
@@ -193,8 +284,55 @@ html, body {
     }
     
     .footer-emails {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      font-size: 1.6vh;
+    }
+  }
+
+
+
+  /* Mobile telephone screens */
+
+  @media screen and (min-width: 600px) and (max-width: 1100px) and (min-height: 451px) {
+    .header-row {
+      font-size: 1.6vh;
+    }
+    
+    .center-content p {
+      font-size: 1.6vh;
+    }
+
+    .sole-description-text {
+      display: flex;
+      width: 98%;
+      text-align: start;
+      font-weight: 400;
+      font-size: 2.1vh;
+    }
+
+    .footer-row-desktop {
+      display: none;
+    }
+    
+    .footer-row-mobile {
+      display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 3vh;
+    }
+
+    .footer-logo img {
+      height: auto;
+      width: 100%;
+    }
+    
+    .footer-emails {
+      flex-direction: row;
+      width: 100%;
+      font-size: 1.6vh;
+      justify-content: space-between;
+      
     }
   }
