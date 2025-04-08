@@ -208,6 +208,7 @@ html, body {
 .close-overlay {
   cursor: pointer;
   transition: opacity 0.3s;
+  font-family: 'Seagal';
 }
 
 .close-overlay:hover {
@@ -240,13 +241,12 @@ html, body {
 #info-button {
   cursor: pointer;
   transition: opacity 0.3s;
+  font-family: 'Seagal';
 }
 
 #info-button:hover {
   opacity: 0.8;
 }
-  
-  
   
   /* Mobile telephone screens */
   @media screen and (max-width: 600px)  and (min-height: 350px) {
