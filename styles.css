@@ -96,6 +96,7 @@ html, body {
     text-align: start;
     font-weight: 400;
     font-size: 2.6vh;
+    line-height: 3vh;
   }
 
   /* Center content */
@@ -164,7 +165,7 @@ html, body {
 
 
 
-/* Info Overlay Styles */
+/* Fix the overlay animation */
 .overlay {
   position: fixed;
   top: 0;
@@ -178,6 +179,13 @@ html, body {
   overflow: hidden;
   font-family: 'Seagal';
   color: black;
+  transform: translateY(-100%); /* Move entire overlay up initially */
+  transition: transform 0.5s ease-out; /* Fixed typo in your transition */
+}
+
+/* When active, move the entire overlay down into view */
+.overlay.active {
+  transform: translateY(0);
 }
 
 .overlay-content {
@@ -188,9 +196,6 @@ html, body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  transform: translateY(-100%); /* Start position off-screen above */
-  transition: transform 0.5s ease-out; /* Animation properties */
-  opacity: 0;
 }
 
 /* Class added by JavaScript when overlay is displayed */
@@ -199,27 +204,6 @@ html, body {
   opacity: 1;
 }
 
-
-/* Make child elements of overlay-content animate in sequence */
-.overlay-content > * {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-  transition-delay: 0.1s;
-}
-
-.overlay-content > *:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.overlay-content > *:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-.overlay.active .overlay-content > * {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .close-overlay {
   cursor: pointer;
@@ -270,10 +254,6 @@ html, body {
       font-size: 1.6vh;
     }
     
-    .center-content h1 {
-      font-size: 32px;
-    }
-    
     .center-content p {
       font-size: 1.6vh;
     }
@@ -283,7 +263,7 @@ html, body {
       width: 98%;
       text-align: start;
       font-weight: 400;
-      font-size: 1.8vh;
+      font-size: 2vh;
     }
 
     .footer-row-desktop {
